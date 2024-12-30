@@ -12,7 +12,7 @@ namespace test
         public void test()
         {
             // #1 new constuructor 
-            var x = new Eg("sth");
+            var x = new Eg("sth" ,2,3);
             // #2 simlyfier delariation of array
             int[] array = [1, 2, 3, 4, 5];
             // #4 default value for lambda
@@ -31,8 +31,12 @@ namespace test
     }
     
     //Name is readonly
-    public class Eg(string name)
-    { }
+    public class Eg(string name, int numberOne, int numberTwo)
+    {
+        public string Name => name;
+        public int NumberOne => numberOne;
+        public int NumberTwo => numberTwo;
+    }
 
     public static class Iterception
     {
